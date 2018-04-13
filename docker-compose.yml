@@ -15,25 +15,25 @@ services:
     volumes:
       - "./data/redis-slave:/data"
     links:
-      - master:redis-master
+      - redis-master
 
   redis-sentinel-1:
     container_name: redis-sentinel-1
     build: redis-sentinel
     links:
-      - master:redis-master
-      - slave:redis-slave
+      - redis-master
+      - redis-slave
 
   redis-sentinel-2:
     container_name: redis-sentinel-2
     build: redis-sentinel
     links:
-      - master:redis-master
-      - slave:redis-slave
+      - redis-master
+      - redis-slave
 
   redis-sentinel-3:
     container_name: redis-sentinel-3
     build: redis-sentinel
     links:
-      - master:redis-master
-      - slave:redis-slave
+      - redis-master
+      - redis-slave
