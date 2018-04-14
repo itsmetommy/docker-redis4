@@ -22,18 +22,15 @@ services:
     build: redis-sentinel
     links:
       - redis-master
-      - redis-slave
 
   redis-sentinel-2:
     container_name: redis-sentinel-2
     build: redis-sentinel
     links:
       - redis-master
-      - redis-slave
 
   redis-sentinel-3:
     container_name: redis-sentinel-3
     build: redis-sentinel
     links:
       - redis-master
-      - redis-slave
